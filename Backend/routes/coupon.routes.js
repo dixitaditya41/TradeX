@@ -1,6 +1,7 @@
 import express from "express";
-import { addCoupon, getAllCoupons, exchangeCoupon } from "../controllers/coupon.controller.js";
+import { addCoupon, getAllCoupons, exchangeCoupon ,approveCoupon , rejectCoupon} from "../controllers/coupon.controller.js";
 import authMiddleware from "../middlewares/authMiddleware.js";
+import adminMiddleware from "../middlewares/adminMiddleware.js";
 
 const router = express.Router();
 

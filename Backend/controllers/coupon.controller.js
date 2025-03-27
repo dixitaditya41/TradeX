@@ -1,5 +1,5 @@
-import Coupon from "../models/Coupon.js";
-import User from "../models/User.js";
+import Coupon from "../models/Coupon.model.js";
+import User from "../models/user.model.js";
 
 export const addCoupon = async (req, res) => {
     try {
