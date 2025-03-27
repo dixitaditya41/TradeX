@@ -75,3 +75,13 @@ export const deleteExpiredCoupons = async () => {
         console.error("Error deleting expired coupons:", error);
     }
 };
+const verifyCoupon = async (code) => {
+    try {
+        // Example: Call an external API (Replace with actual coupon provider API)
+        const response = await axios.get(`https://couponapi.com/verify?code=${code}`);
+        return response.data.isValid; // Assume API returns { isValid: true/false }
+    } catch (error) {
+        console.error("Coupon verification failed:", error.message);
+        return false;
+    }
+};

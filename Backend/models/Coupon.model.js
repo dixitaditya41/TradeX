@@ -25,8 +25,12 @@ const couponSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ["Available", "Exchanged", "Expired"],
+        enum: ["Available", "Exchanged", "Expired","Pending","Rejected","Approved"],
         default: "Available"
+    },
+    verified: {
+        type: Boolean,
+        default: false
     }
 }, { timestamps: true });
 
