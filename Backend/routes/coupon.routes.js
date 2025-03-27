@@ -6,7 +6,7 @@ import adminMiddleware from "../middlewares/adminMiddleware.js";
 const router = express.Router();
 
 router.post("/add", authMiddleware, addCoupon);
-router.get("/all", getAllCoupons);
+router.get("/all", authMiddleware, getAllCoupons);
 router.post("/exchange", authMiddleware, exchangeCoupon);
 router.put("/approve/:couponId", authMiddleware, adminMiddleware, approveCoupon);
 router.put("/reject/:couponId", authMiddleware, adminMiddleware, rejectCoupon);

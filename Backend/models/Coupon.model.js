@@ -26,7 +26,7 @@ const couponSchema = new Schema({
     status: {
         type: String,
         enum: ["Available", "Exchanged", "Expired","Pending","Rejected","Approved"],
-        default: "Available"
+        default: "Pending"
     },
     verified: {
         type: Boolean,
