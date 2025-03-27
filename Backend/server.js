@@ -4,7 +4,7 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import router from "./routes/index.js";
 import connectDB from "./db/index.js";
-
+import "./utils/cronJobs.js"; // Ensure it runs when the server starts
 
 
 dotenv.config();
@@ -22,6 +22,7 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 app.use(router)
+
 
 app.use((req, res)=>{
     res.status(404).send({message: 'route not found!'})
